@@ -1,17 +1,12 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
+"use client";
 
-const inter = Inter({ subsets: ['latin'] });
+import { ThemeProvider } from "next-themes";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
-export const metadata: Metadata = {
-  title: 'Nexus Digital - Modern Marketing Solutions',
-  description: 'Transform your business with data-driven digital marketing strategies that deliver measurable results.',
-};
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -28,9 +23,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main>{children}</main>
           <Footer />
-          <Toaster />
         </ThemeProvider>
       </body>
     </html>

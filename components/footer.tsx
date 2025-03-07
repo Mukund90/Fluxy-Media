@@ -31,7 +31,7 @@ const Footer = () => {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.instagram.com/fluxy_media?igsh=MXJuODJxd2ZhZjl1bQ==" target="_blank" rel="noopener noreferrer">
                   <Instagram className="h-5 w-5" />
                   <span className="sr-only">Instagram</span>
                 </Link>
@@ -51,7 +51,7 @@ const Footer = () => {
               <li><Link href="/services/seo" className="text-muted-foreground hover:text-foreground transition-colors">SEO Optimization</Link></li>
               <li><Link href="/services/ppc" className="text-muted-foreground hover:text-foreground transition-colors">Lead Generation Campaigns</Link></li>
               <li><Link href="/services/social-media" className="text-muted-foreground hover:text-foreground transition-colors">Social Media Managemnt</Link></li>
-              <li><Link href="/services/content" className="text-muted-foreground hover:text-foreground transition-colors">Content Marketing</Link></li>
+              <li><Link href="/services/content" className="text-muted-foreground hover:text-foreground transition-colors">Content Creation</Link></li>
               <li><Link href="/services/email" className="text-muted-foreground hover:text-foreground transition-colors">Website Design & Development</Link></li>
               <li><Link href="/services/analytics" className="text-muted-foreground hover:text-foreground transition-colors">Graphic Design</Link></li>
             </ul>
@@ -60,10 +60,10 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4 text-purple-600">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link href="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">Case Studies</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
-              <li><Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
+              <li><Link href="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
+              <li><Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link></li>
+              <li><Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Career</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Nexus Digital. All rights reserved.
+            © {new Date().getFullYear()} Fluxy Media. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>

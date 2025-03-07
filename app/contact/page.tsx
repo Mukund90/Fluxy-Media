@@ -63,7 +63,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-600">Get in Touch</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Have a question or ready to start your next project? We're here to help.
           </p>
@@ -75,7 +75,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Let's Discuss Your Project</h2>
+              <h2 className="text-3xl font-bold mb-6 text-purple-600">Let's Discuss Your Project</h2>
               <p className="text-muted-foreground mb-8">
                 Fill out the form below, and our team will get back to you within 24 hours to discuss how we can help you achieve your digital marketing goals.
               </p>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 12378-4567</p>
                   </div>
                 </div>
                 
@@ -97,11 +97,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">hello@nexusdigital.com</p>
+                    <p className="text-muted-foreground">buisness@fluxymedia.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
@@ -109,12 +109,12 @@ export default function ContactPage() {
                     <h3 className="font-medium">Office</h3>
                     <p className="text-muted-foreground">123 Marketing Street, San Francisco, CA 94103</p>
                   </div>
-                </div>
+                </div> */}
               </div>
               
               <div className="rounded-xl overflow-hidden">
                 <Image 
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="/images/contact.jpg" 
                   alt="Our Office" 
                   width={600} 
                   height={400}
@@ -126,7 +126,7 @@ export default function ContactPage() {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle>Contact Us</CardTitle>
+                  <CardTitle className='text-purple-600'>Contact Us</CardTitle>
                   <CardDescription>
                     Fill out the form below to get started.
                   </CardDescription>
@@ -186,11 +186,11 @@ export default function ContactPage() {
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="seo">SEO Optimization</SelectItem>
-                            <SelectItem value="ppc">PPC Advertising</SelectItem>
-                            <SelectItem value="social">Social Media Marketing</SelectItem>
-                            <SelectItem value="content">Content Marketing</SelectItem>
-                            <SelectItem value="email">Email Marketing</SelectItem>
-                            <SelectItem value="analytics">Analytics & Reporting</SelectItem>
+                            <SelectItem value="ppc">Lead Generation Campaigns</SelectItem>
+                            <SelectItem value="social">Social Media Management</SelectItem>
+                            <SelectItem value="content">Content Creation</SelectItem>
+                            <SelectItem value="email">Website Desigen & Development</SelectItem>
+                            <SelectItem value="analytics">Graphic Design</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
@@ -227,7 +227,7 @@ export default function ContactPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-purple-600">Frequently Asked Questions</h2>
             <p className="text-muted-foreground">
               Find answers to common questions about our services and process.
             </p>
@@ -278,15 +278,15 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Digital Presence?</h2>
+              <h2 className="text-3xl font-bold mb-4  text-purple-600">Ready to Transform Your Digital Presence?</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Schedule a free 30-minute consultation to discuss your goals and how we can help you achieve them.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" asChild>
+                <Button className='bg-purple-600' size="lg" asChild>
                   <Link href="tel:+15551234567">Call Us Now</Link>
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button  className="bg-purple-600 text-black" size="lg" variant="outline">
                   Schedule Consultation
                 </Button>
               </div>

@@ -74,7 +74,7 @@ export default function Home() {
           <div className="text-center mb-8">
             <h2 className="text-3xl text-purple-600 font-bold text-muted-foreground">Trusted by Innovative Companies</h2>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+          <div className="hidden md:flex justify-between items-center px-4 gap-8"> {/* Desktop view */}
             {[
               { name: 'Acme Inc', src: '/images/1.png' },
               { name: 'Globex', src: '/images/2.png' },
@@ -82,13 +82,40 @@ export default function Home() {
               { name: 'Initech', src: '/images/4.png' },
               { name: 'Umbrella Corp', src: '/images/5.png' }
             ].map((company) => (
-              <div key={company.name} className="hover:opacity-75 transition-opacity">
+              <div 
+                key={company.name} 
+                className="overflow-hidden w-[250px] h-[150px] relative flex items-center justify-center hover:shadow-lg rounded-lg transition-shadow duration-300"
+              >
                 <Image 
                   src={company.src}
                   alt={`${company.name} logo`}
-                  width={120}
-                  height={60}
-                  className="object-contain"
+                  width={200}
+                  height={100}
+                  className="object-contain transition-transform duration-500 hover:scale-150"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile view */}
+          <div className="md:hidden grid grid-cols-2 gap-4">
+            {[
+              { name: 'Acme Inc', src: '/images/1.png' },
+              { name: 'Globex', src: '/images/2.png' },
+              { name: 'Soylent Corp', src: '/images/3.png' },
+              { name: 'Initech', src: '/images/4.png' },
+              { name: 'Umbrella Corp', src: '/images/5.png' }
+            ].map((company) => (
+              <div 
+                key={company.name} 
+                className="overflow-hidden h-[100px] relative flex items-center justify-center hover:shadow-lg rounded-lg transition-shadow duration-300"
+              >
+                <Image 
+                  src={company.src}
+                  alt={`${company.name} logo`}
+                  width={150}
+                  height={75}
+                  className="object-contain transition-transform duration-500 hover:scale-125"
                 />
               </div>
             ))}
@@ -100,7 +127,11 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4 bg-purple-600">Our Services</Badge>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
+            >
+              Our Services
+            </Button>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">Comprehensive Digital Marketing Solutions</h2>
             <p className="text-lg text-muted-foreground">
               We offer a full range of digital marketing services to help your business grow and succeed online.
@@ -288,7 +319,11 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4 bg-purple-600">Our Process</Badge>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
+            >
+              Our Process
+            </Button>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">How We Drive Results</h2>
             <p className="text-lg text-muted-foreground">
               Our proven methodology ensures we deliver consistent results for our clients.
@@ -343,7 +378,11 @@ export default function Home() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4  bg-purple-600">Testimonials</Badge>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
+            >
+              Testimonials
+            </Button>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">What Our Clients Say</h2>
             <p className="text-lg text-muted-foreground">
               Don't just take our word for it. Here's what our clients have to say about working with us.

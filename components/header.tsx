@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ModeToggle } from '@/components/mode-toggle'
-import React from "react"
-import { 
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/mode-toggle";
+import React from "react";
+import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -13,40 +13,46 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { cn } from '@/lib/utils'
-import { Menu, X, Zap } from 'lucide-react'
-import Image from 'next/image'
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import { Menu, X, Zap } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
-      isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
-    )}>
+    <header
+      className={cn(
+        "fixed top-0 w-full z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
+      )}
+    >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4">
-          <Image 
+        <Link href="/" className="flex items-center space-x-2">
+          <Image
             src="/images/logo1.jpg"
             alt="Fluxy Media Logo"
-            width={70}
-            height={55}
-            priority
-            className="rounded-lg object-cover"
+            width={80}
+            height={80}
+            className="transform transition-transform duration-300 hover:scale-110"
           />
-          <span className="font-bold text-3xl tracking-wide text-[#7000FF]">FLUXY <span className="text-black">MEDIA</span></span>
+          <div className="text-2xl font-bold">
+            <span className="text-purple-900">FLUXY</span>
+            <span className="text-purple-400">MEDIA</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,61 +60,137 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/"
+                    className={cn(
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    )}
+                  >
+                    Home
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/about"
+                    className={cn(
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    )}
+                  >
+                    About
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-background hover:bg-accent hover:text-accent-foreground">Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                    <ListItem href="/services/seo" title="SEO Optimization">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <ListItem 
+                      title="SEO Optimization" 
+                      href="/services/seo"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">SEO</div>
+                      </div>
                       Boost your search rankings and drive organic traffic
                     </ListItem>
-                    <ListItem href="/services/ppc" title="PPC Campaigns">
-                      Targeted ads that convert visitors into customers
+                    <ListItem
+                      title="Lead Generation"
+                      href="/services/ppc"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">PPC</div>
+                      </div>
+                      Generating leads and attracting clients through targeted campaigns
                     </ListItem>
-                    <ListItem href="/services/social-media" title="Social Media">
-                      Build your brand presence across all platforms
+                    <ListItem
+                      title="Social Media"
+                      href="/services/social-media"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">Social</div>
+                      </div>
+                      Build your brand presence on social platforms
                     </ListItem>
-                    <ListItem href="/services/content" title="Content Marketing">
-                      Engaging content that resonates with your audience
+                    <ListItem 
+                      title="Content Creation" 
+                      href="/services/content"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">Content</div>
+                      </div>
+                      Create valuable content that resonates with your audience
+                    </ListItem>
+                    <ListItem
+                      title="Web Design"
+                      href="/services/web-design"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">Web</div>
+                      </div>
+                      Modern, responsive websites that convert visitors
+                    </ListItem>
+                    <ListItem
+                      title="Graphic Design"
+                      href="/services/graphic-design"
+                      className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="text-purple-600">Design</div>
+                      </div>
+                      Stunning visuals that enhance your brand identity
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/case-studies" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Case Studies
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    About
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/blog" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Blog
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/career"
+                    className={cn(
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                    )}
+                  >
+                    Careers
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          
-          <div className="flex items-center gap-3">
-            <ModeToggle />
-            <Button asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
+
+          <div className="ml-auto">
+            <div className="flex items-center gap-4">
+              <ModeToggle />
+              <Button asChild className="bg-purple-600">
+                <Link href="/contact">Contact</Link>
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-3">
           <ModeToggle />
-          <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
       </div>
@@ -117,22 +199,75 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-b">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link href="/services/seo" className="py-2 px-4 hover:bg-muted rounded-md">SEO Optimization</Link>
-            <Link href="/services/ppc" className="py-2 px-4 hover:bg-muted rounded-md">PPC Campaigns</Link>
-            <Link href="/services/social-media" className="py-2 px-4 hover:bg-muted rounded-md">Social Media</Link>
-            <Link href="/services/content" className="py-2 px-4 hover:bg-muted rounded-md">Content Marketing</Link>
-            <Link href="/case-studies" className="py-2 px-4 hover:bg-muted rounded-md">Case Studies</Link>
-            <Link href="/about" className="py-2 px-4 hover:bg-muted rounded-md">About</Link>
-            <Link href="/blog" className="py-2 px-4 hover:bg-muted rounded-md">Blog</Link>
-            <Button asChild className="mt-2">
-              <Link href="/contact">Contact Us</Link>
+            <Link href="/" className="py-2 px-4 hover:bg-muted rounded-md">
+              Home
+            </Link>
+            <Link href="/about" className="py-2 px-4 hover:bg-muted rounded-md">
+              About
+            </Link>
+            {/* Services Dropdown */}
+            <div className="py-2 px-4">
+              <div className="font-medium mb-2 text-purple-600">Services</div>
+              <div className="pl-4 flex flex-col gap-2">
+                <Link
+                  href="/services/seo"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">SEO Optimization</span>
+                  <span className="text-sm text-muted-foreground">Boost your search rankings</span>
+                </Link>
+                <Link
+                  href="/services/ppc"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">Lead Generation</span>
+                  <span className="text-sm text-muted-foreground">Targeted marketing campaigns</span>
+                </Link>
+                <Link
+                  href="/services/social-media"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">Social Media</span>
+                  <span className="text-sm text-muted-foreground">Build brand presence</span>
+                </Link>
+                <Link
+                  href="/services/content"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">Content Creation</span>
+                  <span className="text-sm text-muted-foreground">Engaging content strategy</span>
+                </Link>
+                <Link
+                  href="/services/web-design"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">Web Design</span>
+                  <span className="text-sm text-muted-foreground">Modern websites</span>
+                </Link>
+                <Link
+                  href="/services/graphic-design"
+                  className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
+                >
+                  <span className="font-medium">Graphic Design</span>
+                  <span className="text-sm text-muted-foreground">Visual branding</span>
+                </Link>
+              </div>
+            </div>
+            <Link
+              href="/career"
+              className="py-2 px-4 hover:bg-muted rounded-md"
+            >
+              Career
+            </Link>
+            <Button asChild className="mt-2 bg-purple-600">
+              <Link href="/contact">Contact</Link>
             </Button>
           </div>
         </div>
       )}
     </header>
-  )
-}
+  );
+};
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -156,8 +291,8 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";
 
-export default Header
+export default Header;

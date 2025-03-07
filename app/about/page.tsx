@@ -22,8 +22,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-4">About Us</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">We're a Team of Digital Marketing Experts</h1>
+          <Button 
+            className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+          >
+            About Us
+          </Button>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-600">We're a Team of Digital Marketing Experts</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Helping businesses grow through innovative digital marketing strategies since 2015.
           </p>
@@ -48,10 +52,14 @@ export default function AboutPage() {
             </div>
             
             <div className="space-y-6">
-              <Badge>Our Story</Badge>
-              <h2 className="text-3xl font-bold">From Startup to Industry Leader</h2>
+              <Button 
+                className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+              >
+                Our Story
+              </Button>
+              <h2 className="text-3xl font-bold text-purple-600">From Startup to Industry Leader</h2>
               <p className="text-muted-foreground">
-                Nexus Digital was founded in 2015 with a simple mission: to help businesses navigate the increasingly complex digital landscape and achieve measurable results. What started as a small team of three passionate marketers has grown into a full-service digital marketing agency with over 50 experts across SEO, PPC, content, social media, and analytics.
+                Fluxy Media was founded in 2015 with a simple mission: to help businesses navigate the increasingly complex digital landscape and achieve measurable results. What started as a small team of three passionate marketers has grown into a full-service digital marketing agency with over 50 experts across SEO, PPC, content, social media, and analytics.
               </p>
               <p className="text-muted-foreground">
                 Over the years, we've helped hundreds of businesses—from startups to Fortune 500 companies—transform their digital presence and achieve remarkable growth. Our data-driven approach, combined with creative execution, has established us as a trusted partner for businesses looking to thrive in the digital age.
@@ -83,8 +91,12 @@ export default function AboutPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4">Our Values</Badge>
-            <h2 className="text-3xl font-bold mb-4">What Drives Us</h2>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+            >
+              Our Values
+            </Button>
+            <h2 className="text-3xl font-bold mb-4 text-purple-600">What Drives Us</h2>
             <p className="text-lg text-muted-foreground">
               Our core values shape everything we do, from how we work with clients to how we develop our strategies.
             </p>
@@ -141,8 +153,12 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4">Our Team</Badge>
-            <h2 className="text-3xl font-bold mb-4">Meet the Experts</h2>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+            >
+              Our Team
+            </Button>
+            <h2 className="text-3xl font-bold mb-4 text-purple-600">Meet the Experts</h2>
             <p className="text-lg text-muted-foreground">
               Our diverse team of specialists brings together expertise from across the digital marketing landscape.
             </p>
@@ -193,7 +209,7 @@ export default function AboutPage() {
           </div>
           
           <div className="text-center mt-12">
-            <Button asChild>
+            <Button className='bg-purple-600' asChild>
               <Link href="/careers">Join Our Team</Link>
             </Button>
           </div>
@@ -246,8 +262,12 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge className="mb-4">Testimonials</Badge>
-            <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+            >
+              Testimonials
+            </Button>
+            <h2 className="text-3xl font-bold mb-4 text-purple-600">What Our Clients Say</h2>
             <p className="text-lg text-muted-foreground">
               Don't just take our word for it. Here's what our clients have to say about working with us.
             </p>
@@ -271,7 +291,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="text-lg italic mb-6">
-                "Working with Nexus Digital has been transformative for our business. Their strategic approach to SEO and content marketing has helped us establish ourselves as thought leaders in our industry and significantly increased our organic traffic and leads."
+                "Working with Fluxy Media has been transformative for our business. Their strategic approach to SEO and content marketing has helped us establish ourselves as thought leaders in our industry and significantly increased our organic traffic and leads."
               </p>
               <div className="flex items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -299,7 +319,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <p className="text-lg italic mb-6">
-                "The ROI we've seen from our campaigns with Nexus Digital has been incredible. Their team took the time to understand our business and our customers, and they've delivered results that have far exceeded our expectations. They're truly partners in our success."
+                "The ROI we've seen from our campaigns with Fluxy Media has been incredible. Their team took the time to understand our business and our customers, and they've delivered results that have far exceeded our expectations. They're truly partners in our success."
               </p>
               <div className="flex items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -314,19 +334,31 @@ export default function AboutPage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 mb-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <Badge className="mb-4">Our Partners</Badge>
-            <h2 className="text-3xl font-bold mb-4">Trusted Technology Partners</h2>
+            <Button 
+              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
+            >
+              Our Partners
+            </Button>
+            <h2 className="text-3xl font-bold mb-4 text-purple-600">Trusted Technology Partners</h2>
             <p className="text-lg text-muted-foreground">
               We work with leading technology platforms to deliver the best results for our clients.
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
-            {['Google', 'Facebook', 'HubSpot', 'Shopify', 'Salesforce', 'Adobe'].map((partner) => (
-              <div key={partner} className="text-2xl font-bold text-muted-foreground/70">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 mb-8 cursor-pointer">
+            {[
+              'Meblevo', 
+              'DivineHomes', 
+              'HubSpot', 
+              'Shopify', 
+              'HavenCraftInteriors', 
+              "Bombay",
+              "GrowPluse"
+            ].map((partner) => (
+              <div key={partner} className="text-2xl font-bold text-purple-600  transition-colors duration-300">
                 {partner}
               </div>
             ))}
@@ -334,7 +366,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Ready to Work With Us Section - Commented Out
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
@@ -355,6 +387,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
     </div>
   )
 }
