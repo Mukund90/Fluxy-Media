@@ -27,7 +27,7 @@ const serviceData: Record<string, ServiceContent> = {
     ]
   },
   'ppc': {
-    title: 'Pay-Per-Click (PPC) Advertising',
+    title: 'Lead Generation Campaigns',
     description: 'Drive targeted traffic and generate leads with strategic paid advertising campaigns across multiple platforms.',
     features: [
       'Google Ads Management',
@@ -47,7 +47,7 @@ const serviceData: Record<string, ServiceContent> = {
     ]
   },
   'social-media': {
-    title: 'Social Media Marketing',
+    title: 'Social Media Management',
     description: 'Build brand awareness and engage with your audience through strategic social media marketing campaigns.',
     features: [
       'Social Media Strategy Development',
@@ -67,7 +67,7 @@ const serviceData: Record<string, ServiceContent> = {
     ]
   },
   'content': {
-    title: 'Content Marketing',
+    title: 'Content Creation',
     description: 'Create valuable, relevant content that attracts and retains your target audience while driving profitable customer action.',
     features: [
       'Content Strategy Planning',
@@ -87,7 +87,7 @@ const serviceData: Record<string, ServiceContent> = {
     ]
   },
   'web-design': {
-    title: 'Web Design & Development',
+    title: 'WebSite Desigen & Development',
     description: 'Create stunning, user-friendly websites that drive conversions and provide exceptional user experience.',
     features: [
       'Custom Website Design',

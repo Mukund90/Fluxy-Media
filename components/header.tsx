@@ -100,7 +100,7 @@ const Header = () => {
                       Boost your search rankings and drive organic traffic
                     </ListItem>
                     <ListItem
-                      title="Lead Generation"
+                      title="Lead Generation Campaigns"
                       href="/services/ppc"
                       className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
                     >
@@ -110,7 +110,7 @@ const Header = () => {
                       Generating leads and attracting clients through targeted campaigns
                     </ListItem>
                     <ListItem
-                      title="Social Media"
+                      title="Social Media Management"
                       href="/services/social-media"
                       className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
                     >
@@ -130,7 +130,7 @@ const Header = () => {
                       Create valuable content that resonates with your audience
                     </ListItem>
                     <ListItem
-                      title="Web Design"
+                      title="Web Design & Devlopment"
                       href="/services/web-design"
                       className="cursor-pointer hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors duration-150"
                     >
@@ -241,7 +241,7 @@ const Header = () => {
                   href="/services/web-design"
                   className="py-2 px-3 hover:bg-purple-50 dark:hover:bg-purple-950 rounded-md transition-colors duration-150 flex flex-col"
                 >
-                  <span className="font-medium">Web Design</span>
+                  <span className="font-medium">Website Design & Devlopment</span>
                   <span className="text-sm text-muted-foreground">Modern websites</span>
                 </Link>
                 <Link

@@ -52,17 +52,17 @@ const Footer = () => {
               <li><Link href="/services/ppc" className="text-muted-foreground hover:text-foreground transition-colors">Lead Generation Campaigns</Link></li>
               <li><Link href="/services/social-media" className="text-muted-foreground hover:text-foreground transition-colors">Social Media Managemnt</Link></li>
               <li><Link href="/services/content" className="text-muted-foreground hover:text-foreground transition-colors">Content Creation</Link></li>
-              <li><Link href="/services/email" className="text-muted-foreground hover:text-foreground transition-colors">Website Design & Development</Link></li>
-              <li><Link href="/services/analytics" className="text-muted-foreground hover:text-foreground transition-colors">Graphic Design</Link></li>
+              <li><Link href="/services/web-design" className="text-muted-foreground hover:text-foreground transition-colors">Website Design & Development</Link></li>
+              <li><Link href="/services/graphic-design" className="text-muted-foreground hover:text-foreground transition-colors">Graphic Design</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-medium text-lg mb-4 text-purple-600">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
-              <li><Link href="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
+              <li><Link href="/services/seo" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link></li>
               <li><Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Career</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
             </ul>

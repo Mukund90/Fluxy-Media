@@ -74,57 +74,98 @@ export default function ContactPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-purple-600">Let's Discuss Your Project</h2>
-              <p className="text-muted-foreground mb-8">
-                Fill out the form below, and our team will get back to you within 24 hours to discuss how we can help you achieve your digital marketing goals.
-              </p>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <p className="text-muted-foreground">+91 12378-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">buisness@fluxymedia.com</p>
-                  </div>
-                </div>
-                
-                {/* <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Office</h3>
-                    <p className="text-muted-foreground">123 Marketing Street, San Francisco, CA 94103</p>
-                  </div>
-                </div> */}
+            {/* Left Column */}
+            <div className="h-full flex flex-col justify-between">
+              <div>
+                <h2 className="text-3xl font-bold mb-6 text-purple-600">Let's Discuss Your Project</h2>
+                <p className="text-muted-foreground mb-8">
+                  Fill out the form below, and our team will get back to you within 24 hours to discuss how we can help you achieve your digital marketing goals.
+                </p>
               </div>
               
-              <div className="rounded-xl overflow-hidden">
-                <Image 
-                  src="/images/contact.jpg" 
-                  alt="Our Office" 
-                  width={600} 
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
+              <div className="space-y-6">
+                {/* Founder Card */}
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-600 bg-purple-100">
+                      {/* Image commented for now */}
+                      {/* <Image 
+                        src="/images/founder.jpg" 
+                        alt="Founder" 
+                        fill
+                        className="object-cover"
+                      /> */}
+                      <div className="h-full w-full flex items-center justify-center text-purple-600 font-bold text-lg">
+                        AN
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-purple-600">Aditya Nishad</h3>
+                      <p className="font-medium text-gray-700 dark:text-gray-300">Founder & CEO</p>
+                      <div className="mt-1 space-y-0.5">
+                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                          <Phone className="h-3 w-3 mr-2" />
+                          +91 8104982073
+                        </p>
+                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                          <Mail className="h-3 w-3 mr-2" />
+                          aditya@fluxymedia.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Co-founder Card */}
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-600 bg-purple-100">
+                      {/* Image commented for now */}
+                      {/* <Image 
+                        src="/images/cofounder.jpg" 
+                        alt="Co-founder" 
+                        fill
+                        className="object-cover"
+                      /> */}
+                      <div className="h-full w-full flex items-center justify-center text-purple-600 font-bold text-lg">
+                        RJ
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-purple-600">Ravi Jaiswal</h3>
+                      <p className="font-medium text-gray-700 dark:text-gray-300">Co-founder & CTO</p>
+                      <div className="mt-1 space-y-0.5">
+                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                          <Phone className="h-3 w-3 mr-2" />
+                          +91 9136850102
+                        </p>
+                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                          <Mail className="h-3 w-3 mr-2" />
+                          ravi@fluxymedia.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Business Email Card */}
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-purple-600 rounded-full">
+                      <Mail className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-purple-600">Business Inquiries</h3>
+                      <p className="text-gray-600 dark:text-gray-400">business@fluxymedia.com</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
+            {/* Right Column - Form */}
             <div>
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle className='text-purple-600'>Contact Us</CardTitle>
                   <CardDescription>
@@ -284,10 +325,12 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button className='bg-purple-600' size="lg" asChild>
-                  <Link href="tel:+15551234567">Call Us Now</Link>
+                  <Link href="tel:+919136850102">Call Us Now</Link>
                 </Button>
-                <Button  className="bg-purple-600 text-black" size="lg" variant="outline">
-                  Schedule Consultation
+                <Button className="bg-purple-600 text-black" size="lg" variant="outline" asChild>
+                  <Link href="mailto:aditya@fluxymedia.com?subject=Consultation Request&body=I would like to schedule a consultation for discussing my project.">
+                    Schedule Consultation
+                  </Link>
                 </Button>
               </div>
             </div>
