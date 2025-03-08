@@ -45,11 +45,11 @@ const Header = () => {
           <Image
             src="/images/logo1.jpg"
             alt="Fluxy Media Logo"
-            width={80}
-            height={80}
-            className="transform transition-transform duration-300 hover:scale-110"
+            width={50}
+            height={50}
+            className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[80px] md:h-[80px] transform transition-transform duration-300 hover:scale-110"
           />
-          <div className="text-2xl font-bold">
+          <div className="text-lg sm:text-xl md:text-2xl font-bold">
             <span className="text-purple-900">FLUXY</span>
             <span className="text-purple-400">MEDIA</span>
           </div>
