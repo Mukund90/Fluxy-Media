@@ -147,7 +147,8 @@ export default function CareersPage() {
             Send us your resume and we'll keep you in mind for future opportunities.
           </p>
           <Button className="bg-purple-600" size="lg">
-            Submit Your Resume
+            <Link href="mailto:business@fluxymedia.com">Submit Your Resume</Link>
+            
           </Button>
         </div>
       </section>

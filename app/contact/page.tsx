@@ -85,7 +85,7 @@ export default function ContactPage() {
               
               <div className="space-y-6">
                 {/* Founder Card */}
-                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-600 bg-purple-100">
                       {/* Image commented for now */}
@@ -101,13 +101,13 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-purple-600">Aditya Nishad</h3>
-                      <p className="font-medium text-gray-700 dark:text-gray-300">Founder & CEO</p>
+                      <p className="font-medium text-black">Founder</p>
                       <div className="mt-1 space-y-0.5">
-                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                        <p className="flex items-center text-black text-sm">
                           <Phone className="h-3 w-3 mr-2" />
                           +91 8104982073
                         </p>
-                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                        <p className="flex items-center text-black text-sm">
                           <Mail className="h-3 w-3 mr-2" />
                           aditya@fluxymedia.com
                         </p>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                 </div>
                 
                 {/* Co-founder Card */}
-                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-600 bg-purple-100">
                       {/* Image commented for now */}
@@ -133,13 +133,13 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-purple-600">Ravi Jaiswal</h3>
-                      <p className="font-medium text-gray-700 dark:text-gray-300">Co-founder & CTO</p>
+                      <p className="font-medium text-black">Co-Founder</p>
                       <div className="mt-1 space-y-0.5">
-                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                        <p className="flex items-center text-black text-sm">
                           <Phone className="h-3 w-3 mr-2" />
                           +91 9136850102
                         </p>
-                        <p className="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                        <p className="flex items-center text-black text-sm">
                           <Mail className="h-3 w-3 mr-2" />
                           ravi@fluxymedia.com
                         </p>
@@ -149,14 +149,14 @@ export default function ContactPage() {
                 </div>
                 
                 {/* Business Email Card */}
-                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md">
+                <div className="bg-purple-50 dark:bg-purple-900/10 rounded-xl p-5 transform hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-purple-600 rounded-full">
                       <Mail className="h-5 w-5 text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg text-purple-600">Business Inquiries</h3>
-                      <p className="text-gray-600 dark:text-gray-400">business@fluxymedia.com</p>
+                      <p className="text-black">business@fluxymedia.com</p>
                     </div>
                   </div>
                 </div>
@@ -282,7 +282,7 @@ export default function ContactPage() {
               },
               {
                 question: "How much should I budget for digital marketing?",
-                answer: "Your budget depends on your goals, industry, and competition. We offer customized packages starting at $2,500/month, and we'll work with you to develop a strategy that maximizes ROI within your budget constraints."
+                answer: "Your budget depends on your goals, industry, and competition. We offer customized packages and we'll work with you to develop a strategy that maximizes ROI within your budget constraints."
               },
               {
                 question: "Do you offer one-time projects or only ongoing services?",
@@ -297,7 +297,7 @@ export default function ContactPage() {
                 answer: "We work with businesses across various industries, including e-commerce, SaaS, healthcare, finance, education, and more. Our team has specialized experience in multiple sectors."
               },
               {
-                question: "What makes Nexus Digital different from other agencies?",
+                question: "What makes Fluxy Media different from other agencies?",
                 answer: "We combine data-driven strategies with creative execution, focusing on measurable results rather than vanity metrics. Our transparent approach, personalized service, and continuous optimization set us apart."
               }
             ].map((faq, index) => (

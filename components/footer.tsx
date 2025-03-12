@@ -25,7 +25,7 @@ const Footer = () => {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.facebook.com/share/16MhinzbtT/" target="_blank" rel="noopener noreferrer">
                   <Facebook className="h-5 w-5" />
                   <span className="sr-only">Facebook</span>
                 </Link>
@@ -85,9 +85,9 @@ const Footer = () => {
             © {new Date().getFullYear()} Fluxy Media. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</Link>
+            <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

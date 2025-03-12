@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-muted/30">
+      <section className="pt-16 pb-10 md:pt-20 lg:pt-24 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <Button 
             className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20 rounded-full"
@@ -29,19 +29,19 @@ export default function AboutPage() {
           </Button>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-600">We're a Team of Digital Marketing Experts</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Helping businesses grow through innovative digital marketing strategies since 2015.
+            Helping businesses grow through innovative digital marketing strategies since 2023.
           </p>
         </div>
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-14 lg:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative">
               <div className="rounded-xl overflow-hidden shadow-xl">
                 <Image 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  src="images/about1.jpg" 
                   alt="Our Team" 
                   width={600} 
                   height={400}
@@ -57,29 +57,29 @@ export default function AboutPage() {
               >
                 Our Story
               </Button>
-              <h2 className="text-3xl font-bold text-purple-600">From Startup to Industry Leader</h2>
-              <p className="text-muted-foreground">
-                Fluxy Media was founded in 2015 with a simple mission: to help businesses navigate the increasingly complex digital landscape and achieve measurable results. What started as a small team of three passionate marketers has grown into a full-service digital marketing agency with over 50 experts across SEO, PPC, content, social media, and analytics.
+              <h2 className="text-3xl font-bold text-purple-600">From Static to Dynamic</h2>
+              <p className="text-muted-foreground text-justify">
+                Founded in 2023, Fluxy Media set out to revolutionize the digital marketing landscape. Our mission: empower businesses to thrive in the ever-evolving online world. From humble beginnings with a trio of passionate marketers, we've grown into a powerhouse agency boasting over 10 specialists in SEO, content, social media, and analytics. Today, we drive real results for our clients, harnessing the full potential of digital marketing to propel their success.
               </p>
-              <p className="text-muted-foreground">
-                Over the years, we've helped hundreds of businesses—from startups to Fortune 500 companies—transform their digital presence and achieve remarkable growth. Our data-driven approach, combined with creative execution, has established us as a trusted partner for businesses looking to thrive in the digital age.
+              <p className="text-muted-foreground text-justify">
+                We empower businesses to thrive in the digital age. We've transformed the digital presence of multiple companies, driving remarkable growth through data-driven insights and innovative execution.
               </p>
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>10+ years of experience</span>
+                  <span>3,000+ Leads Generated</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>500+ satisfied clients</span>
+                  <span>476+ Sales Conversions</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>50+ marketing experts</span>
+                  <span>50+ Campaigns Executed</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <span>15 industry awards</span>
+                  <span>275+ Reels Created</span>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Button 
@@ -147,10 +147,10 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="py-16 md:py-24">
+      {/* <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Button 
@@ -214,10 +214,10 @@ export default function AboutPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -256,7 +256,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24">
@@ -278,7 +278,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                   <Image 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+                    src="images/1.png" 
                     alt="David Wilson" 
                     width={64} 
                     height={64} 
@@ -286,12 +286,12 @@ export default function AboutPage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">David Wilson</h3>
-                  <p className="text-primary">CEO, TechSolutions</p>
+                  <h3 className="text-xl font-bold">Gruhaseema Interiors</h3>
                 </div>
               </div>
               <p className="text-lg italic mb-6">
-                "Working with Fluxy Media has been transformative for our business. Their strategic approach to SEO and content marketing has helped us establish ourselves as thought leaders in our industry and significantly increased our organic traffic and leads."
+              I struggled with slow growth and unpredictable client flow in my interior design business. But after partnering with Fluxy Media, everything changed for the better. Now my business is more stable and successful. I'm getting consistent leads and closing projects. My business finally feels secure. I'm grateful for the transformation. Fluxy Media's expertise made all the difference. They understood my challenges and provided effective solutions. I'm thrilled with the results. My business is thriving. I highly recommend Fluxy Media.
+
               </p>
               <div className="flex items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -306,7 +306,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                   <Image 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" 
+                    src="images/4.png" 
                     alt="Jennifer Lee" 
                     width={64} 
                     height={64} 
@@ -314,12 +314,11 @@ export default function AboutPage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Jennifer Lee</h3>
-                  <p className="text-primary">Marketing Director, StyleHouse</p>
+                  <h3 className="text-xl font-bold">Bombay Constructor</h3>
                 </div>
               </div>
               <p className="text-lg italic mb-6">
-                "The ROI we've seen from our campaigns with Fluxy Media has been incredible. Their team took the time to understand our business and our customers, and they've delivered results that have far exceeded our expectations. They're truly partners in our success."
+              I listed my business on multiple platforms hoping to attract customers but the leads I received were always fake converting them was a continual battle and the majority of inquiries went unanswered. That's when I started working with Apex Beast Media. In just two months I closed four deals. They set up a system that qualifie low-quality inquiries and sent me real high-intent appointments instead of random leads.I could now finally concentrate on real clients rather than squandering time on pointless follow-ups. If you're tired of chasing false leads these are the right people to help you.
               </p>
               <div className="flex items-center gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -334,7 +333,7 @@ export default function AboutPage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 mb-20 bg-muted/30">
+      {/* <section className="py-16 mb-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <Button 
@@ -364,7 +363,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Ready to Work With Us Section - Commented Out
       <section className="py-20">

@@ -1,11 +1,28 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { ArrowRight, BarChart3, CheckCircle, Globe, LineChart, MessageSquare, Rocket, TrendingUp, Users } from 'lucide-react'
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  ArrowRight,
+  BarChart3,
+  CheckCircle,
+  Globe,
+  LineChart,
+  MessageSquare,
+  Rocket,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -20,24 +37,33 @@ export default function Home() {
                 Trusted by 500+ businesses worldwide
               </Badge> */}
               <h1 className="text-4xl  text-purple-600 md:text-5xl lg:text-6xl font-bold tracking-tight">
-                Transform Your Digital <span className="text-primary text-purple-600">Presence</span>
+                From <span className="text-black">Ambitions</span> to <span className="text-black">Achievements</span><span>, </span>
+                 <span className="text-primary text-purple-600">
+                  Crafting Digital Success Stories
+                </span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Data-driven marketing strategies that deliver measurable results and drive business growth.
+                We are a dynamic team of digital marketing professionals with a
+                passion for helping businesses thrive online. Our agency is
+                built on the principles of Innovation, Creativity, and
+                Excellence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button className='bg-purple-600' size="lg" asChild>
+              <div className="flex flex-col  sm:flex-row gap-4 pt-4">
+                <Button className="bg-purple-600" size="lg" asChild>
                   <Link href="/contact">Get Started</Link>
                 </Button>
-                <Button className='bg-purple-600 text-white'  size="lg" variant="outline" asChild>
+                {/* <Button className='bg-purple-600 text-white'  size="lg" variant="outline" asChild>
                   <Link href="/case-studies">View Case Studies</Link>
-                </Button>
+                </Button> */}
               </div>
-              <div className="flex items-center gap-4 pt-4">
+              {/* <div className="flex items-center gap-4 pt-4">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-background overflow-hidden bg-muted">
-                      <Image 
+                    <div
+                      key={i}
+                      className="w-10 h-10 rounded-full border-2 border-background overflow-hidden bg-muted"
+                    >
+                      <Image
                         src={`/images/${i}.png`}
                         alt={`Client ${i}`}
                         width={40}
@@ -47,16 +73,17 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="text-sm">
-                  <span className="font-medium">4.9/5</span> from over 400 reviews
+                  <span className="font-medium">4.6/5</span> from over 50
+                  reviews
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="relative">
               <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="/images/headers.jpg" 
-                  alt="Digital Marketing Team" 
-                  width={600} 
+                <Image
+                  src="/images/headers.jpg"
+                  alt="Digital Marketing Team"
+                  width={600}
                   height={200}
                   className="w-full h-auto object-cover"
                 />
@@ -72,21 +99,25 @@ export default function Home() {
       <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl text-purple-600 font-bold text-muted-foreground">Trusted by Innovative Companies</h2>
+            <h2 className="text-3xl text-purple-600 font-bold text-muted-foreground">
+              Trusted by Innovative Companies
+            </h2>
           </div>
-          <div className="hidden md:flex justify-between items-center px-4 gap-8"> {/* Desktop view */}
+          <div className="hidden md:flex justify-between items-center px-4 gap-8">
+            {" "}
+            {/* Desktop view */}
             {[
-              { name: 'Acme Inc', src: '/images/1.png' },
-              { name: 'Globex', src: '/images/2.png' },
-              { name: 'Soylent Corp', src: '/images/3.png' },
-              { name: 'Initech', src: '/images/4.png' },
-              { name: 'Umbrella Corp', src: '/images/5.png' }
+              { name: "Acme Inc", src: "/images/1.png" },
+              { name: "Globex", src: "/images/2.png" },
+              { name: "Soylent Corp", src: "/images/3.png" },
+              { name: "Initech", src: "/images/4.png" },
+              { name: "Umbrella Corp", src: "/images/5.png" },
             ].map((company) => (
-              <div 
-                key={company.name} 
+              <div
+                key={company.name}
                 className="overflow-hidden w-[250px] h-[150px] relative flex items-center justify-center hover:shadow-lg rounded-lg transition-shadow duration-300"
               >
-                <Image 
+                <Image
                   src={company.src}
                   alt={`${company.name} logo`}
                   width={200}
@@ -100,17 +131,17 @@ export default function Home() {
           {/* Mobile view */}
           <div className="md:hidden grid grid-cols-2 gap-4">
             {[
-              { name: 'Acme Inc', src: '/images/1.png' },
-              { name: 'Globex', src: '/images/2.png' },
-              { name: 'Soylent Corp', src: '/images/3.png' },
-              { name: 'Initech', src: '/images/4.png' },
-              { name: 'Umbrella Corp', src: '/images/5.png' }
+              { name: "Acme Inc", src: "/images/1.png" },
+              { name: "Globex", src: "/images/2.png" },
+              { name: "Soylent Corp", src: "/images/3.png" },
+              { name: "Initech", src: "/images/4.png" },
+              { name: "Umbrella Corp", src: "/images/5.png" },
             ].map((company) => (
-              <div 
-                key={company.name} 
+              <div
+                key={company.name}
                 className="overflow-hidden h-[100px] relative flex items-center justify-center hover:shadow-lg rounded-lg transition-shadow duration-300"
               >
-                <Image 
+                <Image
                   src={company.src}
                   alt={`${company.name} logo`}
                   width={150}
@@ -127,66 +158,86 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Button 
-              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
-            >
+            <Button className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20">
               Our Services
             </Button>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">Comprehensive Digital Marketing Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">
+              Comprehensive Digital Marketing Solutions
+            </h2>
             <p className="text-lg text-muted-foreground">
-              We offer a full range of digital marketing services to help your business grow and succeed online.
+              We offer a full range of digital marketing services to help your
+              business grow and succeed online.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'SEO Optimization',
-                description: 'Improve your search rankings and drive organic traffic to your website.',
+                title: "SEO Optimization",
+                description:
+                  "Improve your search rankings and drive organic traffic to your website.",
                 icon: <Globe className="h-10 w-10 text-primary" />,
-                link: '/services/seo'
+                link: "/services/seo",
               },
               {
-                title: 'Lead Generation Campaigns',
-                description: 'Generating leads, booking appointments, and attracting clients through targeted marketing campaigns.',
+                title: "Lead Generation Campaigns",
+                description:
+                  "Generating leads, booking appointments, and attracting clients through targeted marketing campaigns.",
                 icon: <BarChart3 className="h-10 w-10 text-primary" />,
-                link: '/services/ppc'
+                link: "/services/ppc",
               },
               {
-                title: 'Social Media Management',
-                description: 'Build your brand presence and engage with your audience on social platforms.',
+                title: "Social Media Management",
+                description:
+                  "Build your brand presence and engage with your audience on social platforms.",
                 icon: <Users className="h-10 w-10 text-primary" />,
-                link: '/services/social-media'
+                link: "/services/social-media",
               },
               {
-                title: 'Content Creation',
-                description: 'Create valuable content that resonates with your target audience.',
+                title: "Content Creation",
+                description:
+                  "Create valuable content that resonates with your target audience.",
                 icon: <MessageSquare className="h-10 w-10 text-primary" />,
-                link: '/services/content'
+                link: "/services/content",
               },
               {
-                title: 'Website Design & Development',
-                description: 'Creating modern, responsive websites that convert visitors into customers.',
+                title: "Website Design & Development",
+                description:
+                  "Creating modern, responsive websites that convert visitors into customers.",
                 icon: <LineChart className="h-10 w-10 text-primary" />,
-                link: '/services/web-design'
+                link: "/services/web-design",
               },
               {
-                title: 'Graphic Design',
-                description: 'Creating stunning visuals that enhance your brand identity and marketing materials.',
+                title: "Graphic Design",
+                description:
+                  "Creating stunning visuals that enhance your brand identity and marketing materials.",
                 icon: <TrendingUp className="h-10 w-10 text-primary" />,
-                link: '/services/graphic-design'
-              }
+                link: "/services/graphic-design",
+              },
             ].map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all">
+              <Card
+                key={index}
+                className="group hover:shadow-lg transition-all"
+              >
                 <CardHeader>
                   <div className="mb-4">{service.icon}</div>
-                  <CardTitle className='text-purple-600'>{service.title}</CardTitle>
+                  <CardTitle className="text-purple-600">
+                    {service.title}
+                  </CardTitle>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button variant="ghost" className="group-hover:text-primary" asChild>
-                    <Link href={service.link} className="flex items-center gap-2">
-                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <Button
+                    variant="ghost"
+                    className="group-hover:text-primary"
+                    asChild
+                  >
+                    <Link
+                      href={service.link}
+                      className="flex items-center gap-2"
+                    >
+                      Learn more{" "}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </Button>
                 </CardFooter>
@@ -196,7 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-     
       {/* <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -246,9 +296,9 @@ export default function Home() {
                   </Button>
                 </div>
               </div> */}
-            {/* </TabsContent> */}
-            
-            {/* <TabsContent value="saas">
+      {/* </TabsContent> */}
+
+      {/* <TabsContent value="saas">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="rounded-xl overflow-hidden">
                   <Image 
@@ -279,7 +329,7 @@ export default function Home() {
                 </div>
               </div>
             </TabsContent> */}
-{/*             
+      {/*             
             <TabsContent value="local">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="rounded-xl overflow-hidden">
@@ -319,51 +369,63 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Button 
-              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
-            >
+            <Button className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20">
               Our Process
             </Button>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">How We Drive Results</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">
+              How We Drive Results
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Our proven methodology ensures we deliver consistent results for our clients.
+              Our proven methodology ensures we deliver consistent results for
+              our clients.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Discovery',
-                description: 'We start by understanding your business, goals, target audience, and competitive landscape.',
-                icon: <Users className="h-8 w-8" />
+                step: "01",
+                title: "Discovery",
+                description:
+                  "We start by understanding your business, goals, target audience, and competitive landscape.",
+                icon: <Users className="h-8 w-8" />,
               },
               {
-                step: '02',
-                title: 'Strategy',
-                description: 'We develop a customized digital marketing strategy tailored to your specific needs and objectives.',
-                icon: <LineChart className="h-8 w-8" />
+                step: "02",
+                title: "Strategy",
+                description:
+                  "We develop a customized digital marketing strategy tailored to your specific needs and objectives.",
+                icon: <LineChart className="h-8 w-8" />,
               },
               {
-                step: '03',
-                title: 'Implementation',
-                description: 'Our team executes the strategy with precision, focusing on quality and attention to detail.',
-                icon: <Rocket className="h-8 w-8" />
+                step: "03",
+                title: "Implementation",
+                description:
+                  "Our team executes the strategy with precision, focusing on quality and attention to detail.",
+                icon: <Rocket className="h-8 w-8" />,
               },
               {
-                step: '04',
-                title: 'Optimization',
-                description: 'We continuously monitor, analyze, and optimize campaigns to maximize ROI and performance.',
-                icon: <TrendingUp className="h-8 w-8" />
-              }
+                step: "04",
+                title: "Optimization",
+                description:
+                  "We continuously monitor, analyze, and optimize campaigns to maximize ROI and performance.",
+                icon: <TrendingUp className="h-8 w-8" />,
+              },
             ].map((process, index) => (
-              <Card key={index} className="relative overflow-hidden border-none bg-muted/50 hover:bg-muted transition-colors">
-                <div className="absolute top-4 right-4 text-4xl font-bold text-primary/10">{process.step}</div>
+              <Card
+                key={index}
+                className="relative overflow-hidden border-none bg-muted/50 hover:bg-muted transition-colors"
+              >
+                <div className="absolute top-4 right-4 text-4xl font-bold text-primary/10">
+                  {process.step}
+                </div>
                 <CardHeader>
                   <div className="p-3 bg-primary/10 rounded-lg w-fit mb-4">
                     {process.icon}
                   </div>
-                  <CardTitle className="text-purple-600">{process.title}</CardTitle>
+                  <CardTitle className="text-purple-600">
+                    {process.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{process.description}</p>
@@ -378,52 +440,55 @@ export default function Home() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Button 
-              className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20"
-            >
+            <Button className="mb-4 bg-purple-600 hover:bg-purple-600/90 transform hover:scale-105 transition-all duration-300 text-lg px-5 py-6 shadow-lg hover:shadow-purple-500/20">
               Testimonials
             </Button>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">What Our Clients Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-600">
+              What Our Clients Say
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Don't just take our word for it. Here's what our clients have to
+              say about working with us.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "Fluxy Media transformed our online presence. Their SEO strategy increased our organic traffic by 200% in just 4 months.",
-                name: "Sarah Johnson",
-                title: "Marketing Director, TechCorp",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
+                quote:
+                  "I struggled with slow growth and unpredictable client flow in my interior design business. But after partnering with Fluxy Media, everything changed for the better. Now my business is more stable and successful. I'm getting consistent leads and closing projects. My business finally feels secure. I'm grateful for the transformation. Fluxy Media's expertise made all the difference. They understood my challenges and provided effective solutions. I'm thrilled with the results. My business is thriving. I highly recommend Fluxy Media.",
+                name: "Gruhaseema Interiors",
+                image: "images/1.png",
               },
               {
-                quote: "The ROI we've seen from our campaigns with Fluxy Media has been incredible. They truly understand our business and our customers.",
-                name: "Michael Chen",
-                title: "CEO, GrowthLabs",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
+                quote:
+                  "I listed my business on multiple platforms hoping to attract customers but the leads I received were always fake converting them was a continual battle and the majority of inquiries went unanswered. That’s when I started working with Fluxy Media. In just two months I closed four deals. They set up a system that qualifie low-quality inquiries and sent me real high-intent appointments instead of random leads.I could now finally concentrate on real clients rather than squandering time on pointless follow-ups. If you're tired of chasing false leads these are the right people to help you.",
+                name: "Bombay Engineers and Contractors",
+                image: "images/4.png",
               },
               {
-                quote: "Working with Fluxy Media has been a game-changer for our e-commerce business. Our conversion rate has doubled since implementing their strategies.",
-                name: "Emily Rodriguez",
-                title: "Founder, StyleHouse",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
-              }
-            ].map((testimonial, index) => (
+                quote:
+                  "I was spending a lot of time and money trying to get clients but most inquiries weren’t serious People would ask for quotes and never respond or they were just exploring options with no intent to buy It was frustrating and a waste of effort After working with Fluxy Media everything changed They didn’t just bring leads they connected me with serious prospects ready to start Instead of chasing unresponsive inquiries I started getting quality appointments In the last three months I’ve closed three deals and am still in talks with two more clients If you’re struggling with unqualified leads they know exactly how to fix that",
+                name: "Studio Core Design",
+                image: "images/2.png",
+              },
+            ].map((testimonial: any, index: any) => (
               <Card key={index} className="bg-background">
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden">
-                      <Image 
-                        src={testimonial.image} 
-                        alt={testimonial.name} 
-                        width={48} 
-                        height={48} 
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={48}
+                        height={48}
                         className="object-cover"
                       />
                     </div>
                     <div>
-                      <CardTitle className="text-base">{testimonial.name}</CardTitle>
+                      <CardTitle className="text-base">
+                        {testimonial.name}
+                      </CardTitle>
                       <CardDescription>{testimonial.title}</CardDescription>
                     </div>
                   </div>
@@ -535,5 +600,5 @@ export default function Home() {
         </div>
       </section> */}
     </div>
-  )
+  );
 }
