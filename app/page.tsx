@@ -467,8 +467,8 @@ export default function Home() {
                 image: "images/4.png",
               },
               {
-                quote:
-                  "I was spending a lot of time and money trying to get clients but most inquiries weren’t serious People would ask for quotes and never respond or they were just exploring options with no intent to buy It was frustrating and a waste of effort After working with Fluxy Media everything changed They didn’t just bring leads they connected me with serious prospects ready to start Instead of chasing unresponsive inquiries I started getting quality appointments In the last three months I’ve closed three deals and am still in talks with two more clients If you’re struggling with unqualified leads they know exactly how to fix that",
+                quote:"I was spending a lot of time and money trying to get clients but most inquiries weren’t serious. People would ask for quotes and never respond or they were just exploring options with no intent to buy. It was frustrating and a waste of effort. After working with Fluxy Media everything changed, they didn’t just bring leads they connected me with serious prospects ready to start. Instead of chasing unresponsive inquiries I started getting quality appointments. In the last three months I’ve closed three deals and am still in talks with two more clients. If you’re struggling with unqualified leads they know exactly how to fix that.",
+
                 name: "Studio Core Design",
                 image: "images/2.png",
               },
