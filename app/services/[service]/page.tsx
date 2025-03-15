@@ -7,7 +7,7 @@ interface ServiceContent {
 
 const serviceData: Record<string, ServiceContent> = {
   'seo': {
-    title: 'Search Engine Optimization (SEO)',
+    title: 'SEO Optimization (SEO)',
     description: "Boost your website's visibility and rank higher in search engine results with our data-driven SEO strategies.",
     features: [
       'Comprehensive Website Audit',
@@ -87,7 +87,7 @@ const serviceData: Record<string, ServiceContent> = {
     ]
   },
   'web-design': {
-    title: 'WebSite Desigen & Development',
+    title: 'Website Design & Development',
     description: 'Create stunning, user-friendly websites that drive conversions and provide exceptional user experience.',
     features: [
       'Custom Website Design',
