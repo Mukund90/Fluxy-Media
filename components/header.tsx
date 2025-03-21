@@ -141,7 +141,7 @@ const Header = () => {
                     </ListItem>
 
                     <ListItem
-                      title="Web Design & Devlopment"
+                      title="Website Design & Development"
                       href="/services/web-design"
                       className="cursor-pointer transition-colors duration-150"
                     >
@@ -220,7 +220,7 @@ const Header = () => {
             </Link>
             {/* Services Dropdown */}
             <div className="py-2 px-4">
-              <div className="font-medium mb-2 text-gray-800 bg-purple-600 text-white p-2 rounded-md">Services</div>
+              <div className="font-medium mb-2  bg-purple-600 text-white p-2 rounded-md">Services</div>
               <div className="pl-4 flex flex-col gap-2">
                 <Link
                   href="/services/seo"
