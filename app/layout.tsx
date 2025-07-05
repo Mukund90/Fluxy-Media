@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -26,6 +27,8 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        {/* SpeedInsights should be outside ThemeProvider but still inside body */}
+        <SpeedInsights />
       </body>
     </html>
   );
