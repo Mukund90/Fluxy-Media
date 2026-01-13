@@ -36,17 +36,6 @@ Fluxy Media provides an **end-to-end growth solution**:
 - Premium UI with modern animations
 
 ---
-
-## 🛠 Tech Stack
-
-- **Frontend:** React, Tailwind CSS, Vite  
-- **UI Components:** Shadcn/UI  
-- **Animations:** CSS animations, motion video backgrounds  
-- **Routing:** React Router  
-- **Icons:** Lucide React
-
----
-
 ## 🧪 Performance Highlights
 
 - ⚡ 3–5x ROI for clients within 90 days  
@@ -56,14 +45,3 @@ Fluxy Media provides an **end-to-end growth solution**:
 
 ---
 
-## 🖥 Getting Started
-
-### Clone the project
-```bash
-git clone https://github.com/your-username/fluxy-media.git
----
-
-###Install dependencies
----bash
-npm install
----
