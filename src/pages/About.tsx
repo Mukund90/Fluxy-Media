@@ -6,26 +6,30 @@ import Layout from "@/components/layout/Layout";
 const values = [
   {
     title: "Specialization",
-    description: "We only work with interior designers. This focus allows us to deeply understand your market and deliver better results.",
+    description:
+      "We only work with interior designers. This focus allows us to deeply understand your market and deliver better results.",
   },
   {
     title: "Transparency",
-    description: "No hidden fees, no confusing reports. You'll always know exactly where your money is going and what results it's generating.",
+    description:
+      "No hidden fees, no confusing reports. You'll always know exactly where your money is going and what results it's generating.",
   },
   {
     title: "Results-Driven",
-    description: "We measure success by one thing: qualified leads that convert into paying clients for your business.",
+    description:
+      "We measure success by one thing: qualified leads that convert into paying clients for your business.",
   },
   {
     title: "Partnership",
-    description: "We're not just a vendor. We become an extension of your team, invested in your long-term growth.",
+    description:
+      "We're not just a vendor. We become an extension of your team, invested in your long-term growth.",
   },
 ];
 
 const milestones = [
   { number: "2022", label: "Founded in Mumbai" },
-  { number: "15+", label: "Interior Design Clients" },
-  { number: "₹45L+", label: "Revenue Generated for Clients" },
+  { number: "30+", label: "Interior Design Clients" },
+  { number: "₹10Cr+", label: "Revenue Generated for Clients" },
   { number: "2", label: "Countries Served (India & UAE)" },
 ];
 
@@ -37,11 +41,12 @@ const About = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              The <span className="gradient-text">Meta Ads Agency</span> Built for Interior Designers
+              The <span className="gradient-text">Marketing Agency</span> Built
+              for Interior Designers
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're a Mumbai-based digital marketing agency that exclusively helps 
-              interior designers attract high-quality clients through Meta advertising.
+              We're a Mumbai-based digital marketing agency that exclusively
+              helps interior designers attract high-quality clients.
             </p>
           </div>
         </div>
@@ -57,21 +62,21 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Fluxy Media was born from a simple observation: interior designers 
-                  were struggling to find quality leads online. Traditional marketing 
-                  agencies didn't understand the interior design industry, and generic 
-                  approaches weren't working.
+                  Fluxy Media was born from a simple observation: interior
+                  designers were struggling to find quality leads online.
+                  Traditional marketing agencies didn't understand the interior
+                  design industry, and generic approaches weren't working.
                 </p>
                 <p>
-                  We decided to change that. By focusing exclusively on interior 
-                  designers, we've developed a deep understanding of what makes 
-                  homeowners choose one designer over another, and how to reach 
+                  We decided to change that. By focusing exclusively on interior
+                  designers, we've developed a deep understanding of what makes
+                  homeowners choose one designer over another, and how to reach
                   them at the perfect moment.
                 </p>
                 <p>
-                  Today, we've helped over 15 interior design studios across India 
-                  and UAE generate consistent, high-quality leads that convert into 
-                  profitable projects.
+                  Today, we've helped over 30+ interior design studios across
+                  India and UAE generate consistent, high-quality leads that
+                  convert into profitable projects.
                 </p>
               </div>
             </div>
@@ -82,7 +87,9 @@ const About = () => {
                     <div className="text-3xl font-bold gradient-text mb-2">
                       {milestone.number}
                     </div>
-                    <p className="text-sm text-muted-foreground">{milestone.label}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {milestone.label}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -102,9 +109,9 @@ const About = () => {
               Our <span className="gradient-text">Mission</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              To become the growth partner of choice for interior designers across 
-              India and UAE, helping them build thriving businesses through strategic 
-              digital advertising.
+              To become the growth partner of choice for interior designers
+              across India and UAE, helping them build thriving businesses
+              through strategic digital advertising.
             </p>
           </div>
         </div>
@@ -128,7 +135,9 @@ const About = () => {
                 <div className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {value.title}
+                    </h3>
                     <p className="text-muted-foreground">{value.description}</p>
                   </div>
                 </div>
@@ -148,17 +157,18 @@ const About = () => {
                 <span className="text-lg font-semibold">Based in Mumbai</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Local Expertise, <span className="gradient-text">Global Reach</span>
+                Local Expertise,{" "}
+                <span className="gradient-text">Global Reach</span>
               </h2>
               <p className="text-muted-foreground mb-6">
-                While we're headquartered in Mumbai's Santacruz East, we serve 
-                interior designers across India and the UAE. Our remote-first 
+                While we're headquartered in Mumbai's Santacruz East, we serve
+                interior designers across India and the UAE. Our remote-first
                 approach means we can work with you regardless of your location.
               </p>
               <div className="flex items-center gap-4">
                 <Users className="w-5 h-5 text-primary" />
                 <span className="text-muted-foreground">
-                  Serving: Mumbai, Pune, Bangalore, Delhi, Dubai, Abu Dhabi & more
+                  Serving: India & UAE
                 </span>
               </div>
             </div>
@@ -171,7 +181,7 @@ const About = () => {
                 Santacruz(E), Mumbai 400055
               </p>
               <p className="text-sm text-muted-foreground">
-                aditya@fluxymedia.com | ravi@fluxymedia.com
+                business@fluxymedia.com
               </p>
             </div>
           </div>
@@ -181,12 +191,15 @@ const About = () => {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="gradient-bg rounded-2xl p-8 md:p-16 text-center glow-purple">
+          <div
+            className="rounded-2xl p-8 md:p-16 text-center glow-purple
+bg-gradient-to-br from-purple-800 via-purple-900 to-[#12001f]"
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
               Let's Grow Your Interior Design Business Together
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Book a free consultation to see how we can help you attract more 
+              Book a free consultation to see how we can help you attract more
               high-quality clients.
             </p>
             <Link to="/contact">

@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "aditya@fluxymedia.com",
-    href: "mailto:aditya@fluxymedia.com",
+    value: "business@fluxymedia.com",
+    href: "mailto:business@fluxymedia.com",
     description: "Send us an email",
   },
   {
@@ -89,8 +89,8 @@ const Contact = () => {
               Let's <span className="gradient-text">Talk</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to grow your interior design business? Get in touch with us 
-              for a free Saturday audit call.
+              Ready to grow your interior design business? Get in touch with us
+              for a free audit call.
             </p>
           </div>
         </div>
@@ -106,10 +106,10 @@ const Contact = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-primary-foreground">
-                  Free Saturday Audit
+                  Free Audit
                 </h2>
                 <p className="text-primary-foreground/80">
-                  Book your complimentary Meta Ads audit session
+                  Book your complimentary audit session
                 </p>
               </div>
             </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                 Get in <span className="gradient-text">Touch</span>
               </h2>
               <p className="text-muted-foreground mb-8">
-                Choose your preferred way to reach us. We typically respond 
+                Choose your preferred way to reach us. We typically respond
                 within 24 hours on weekdays.
               </p>
 
@@ -147,12 +147,20 @@ const Contact = () => {
                       <info.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm text-muted-foreground">{info.description}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {info.description}
+                      </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          target={info.href.startsWith("http") ? "_blank" : undefined}
-                          rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          target={
+                            info.href.startsWith("http") ? "_blank" : undefined
+                          }
+                          rel={
+                            info.href.startsWith("http")
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
                           className="font-semibold hover:text-primary transition-colors"
                         >
                           {info.value}
@@ -207,7 +215,10 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="text-sm font-medium mb-2 block">
+                    <label
+                      htmlFor="name"
+                      className="text-sm font-medium mb-2 block"
+                    >
                       Name *
                     </label>
                     <Input
@@ -221,7 +232,10 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="text-sm font-medium mb-2 block">
+                    <label
+                      htmlFor="phone"
+                      className="text-sm font-medium mb-2 block"
+                    >
                       Phone *
                     </label>
                     <Input
@@ -237,7 +251,10 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-sm font-medium mb-2 block">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium mb-2 block"
+                  >
                     Email *
                   </label>
                   <Input
@@ -252,7 +269,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="text-sm font-medium mb-2 block">
+                  <label
+                    htmlFor="company"
+                    className="text-sm font-medium mb-2 block"
+                  >
                     Company Name
                   </label>
                   <Input
@@ -265,7 +285,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="text-sm font-medium mb-2 block">
+                  <label
+                    htmlFor="message"
+                    className="text-sm font-medium mb-2 block"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -308,32 +331,40 @@ const Contact = () => {
             </h2>
             <div className="space-y-4">
               <div className="card-glass p-6">
-                <h3 className="font-semibold mb-2">What is the Free Saturday Audit?</h3>
+                <h3 className="font-semibold mb-2">What is the Free Audit?</h3>
                 <p className="text-muted-foreground">
-                  It's a complimentary 30-minute call where we analyze your current 
-                  marketing efforts and show you opportunities for improvement. No 
-                  obligations, just value.
+                  It's a complimentary 30-minute call where we analyze your
+                  current marketing efforts and show you opportunities for
+                  improvement. No obligations, just value.
                 </p>
               </div>
               <div className="card-glass p-6">
-                <h3 className="font-semibold mb-2">How quickly can I see results?</h3>
+                <h3 className="font-semibold mb-2">
+                  How quickly can I see results?
+                </h3>
                 <p className="text-muted-foreground">
-                  Most of our clients start seeing leads within the first 2 weeks. 
-                  Meaningful results (closed deals) typically come within 60-90 days.
+                  Most of our clients start seeing leads within the first 2
+                  weeks. Meaningful results (closed deals) typically come within
+                  60-90 days.
                 </p>
               </div>
               <div className="card-glass p-6">
-                <h3 className="font-semibold mb-2">Do you work with designers outside India?</h3>
+                <h3 className="font-semibold mb-2">
+                  Do you work with designers outside India?
+                </h3>
                 <p className="text-muted-foreground">
-                  Yes! We currently work with interior designers in India and UAE. 
-                  Our remote-first approach allows us to serve clients anywhere.
+                  Yes! We currently work with interior designers in India and
+                  UAE. Our remote-first approach allows us to serve clients
+                  anywhere.
                 </p>
               </div>
               <div className="card-glass p-6">
-                <h3 className="font-semibold mb-2">What's included in your service?</h3>
+                <h3 className="font-semibold mb-2">
+                  What's included in your service?
+                </h3>
                 <p className="text-muted-foreground">
-                  Everything: ad campaign management, landing page design, lead 
-                  tracking dashboard, weekly reports, and ongoing optimization. 
+                  Everything: ad campaign management, landing page design, lead
+                  tracking dashboard, weekly reports, and ongoing optimization.
                   It's a complete done-for-you system.
                 </p>
               </div>

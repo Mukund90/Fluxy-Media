@@ -22,11 +22,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center font-bold text-xl text-primary-foreground">
-              F
-            </div>
+            <img
+              src="/fluxy_logo.png"
+              alt="Fluxy Media Logo"
+              className="w-16 h-16 object-contain"
+            />
             <span className="text-xl font-bold">
-              Fluxy<span className="gradient-text">Media</span>
+              Fluxy<span className="gradient-text"> Media</span>
             </span>
           </Link>
 
@@ -89,7 +91,9 @@ const Header = () => {
                 </Link>
               ))}
               <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button className="btn-primary w-full mt-2">Book Free Audit</Button>
+                <Button className="btn-primary w-full mt-2">
+                  Book Free Audit
+                </Button>
               </Link>
             </div>
           </nav>

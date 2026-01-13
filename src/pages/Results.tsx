@@ -7,62 +7,66 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 const caseStudies = [
   {
     client: "Platinum Design",
-    location: "Mumbai",
+    // location: "Mumbai",
     results: {
-      leads: 45,
-      costPerLead: 180,
+      leads: 162,
+      costPerLead: 84,
       totalSpend: 8100,
-      dealsWon: 3,
+      dealsWon: 36,
       revenueGenerated: 450000,
     },
-    testimonial: "The quality of leads we received was exceptional. These were serious homeowners ready to invest in their interiors.",
-    duration: "3 months",
+    testimonial:
+      "The quality of leads we received was exceptional. These were serious homeowners ready to invest in their interiors.",
+    duration: "1 month",
   },
   {
     client: "Gruhaseema Interiors",
-    location: "Pune",
+    // location: "Pune",
     results: {
-      leads: 67,
-      costPerLead: 150,
+      leads: 163,
+      costPerLead: 80,
       totalSpend: 10050,
-      dealsWon: 5,
+      dealsWon: 33,
       revenueGenerated: 680000,
     },
-    testimonial: "Fluxy Media helped us expand our reach beyond our local area. We're now getting clients from across Maharashtra.",
-    duration: "4 months",
+    testimonial:
+      "Fluxy Media helped us expand our reach beyond our local area. We're now getting clients from across Maharashtra.",
+    duration: "1 month",
   },
   {
     client: "Shree Interior Designs",
-    location: "Mumbai",
+    // location: "Mumbai",
     results: {
-      leads: 52,
-      costPerLead: 165,
+      leads: 105,
+      costPerLead: 96.25,
       totalSpend: 8580,
-      dealsWon: 4,
+      dealsWon: 28,
       revenueGenerated: 520000,
     },
-    testimonial: "Within the first month, we closed 2 projects worth ₹12L. The ROI has been incredible.",
-    duration: "3 months",
+    testimonial:
+      "Within the first month, we closed 2 projects. The ROI has been incredible.",
+    duration: "1 month",
   },
   {
     client: "Studio Core Design",
-    location: "Bangalore",
+    // location: "Bangalore",
     results: {
-      leads: 38,
-      costPerLead: 210,
+      leads: 83,
+      costPerLead: 90,
       totalSpend: 7980,
-      dealsWon: 2,
+      dealsWon: 26,
       revenueGenerated: 350000,
     },
-    testimonial: "Professional team, transparent reporting. They really understand the interior design market.",
-    duration: "2 months",
+    testimonial:
+      "Professional team, transparent reporting. They really understand the interior design market.",
+    duration: "1 month",
   },
 ];
 
 const overallStats = [
-  { label: "Total Leads Generated", value: 202, suffix: "+" },
-  { label: "Deals Closed", value: 14, suffix: "" },
-  { label: "Revenue Generated", value: 20, prefix: "₹", suffix: "L+" },
+  { label: "Total Leads Generated", value: 10000, suffix: "+" },
+  { label: "Deals Closed", value: 30, suffix: "+" },
+  { label: "Revenue Generated", value: 10, prefix: "₹", suffix: "Cr+" },
   { label: "Avg. ROI", value: 5, suffix: "X" },
 ];
 
@@ -74,10 +78,11 @@ const Results = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Real <span className="gradient-text">Results</span> for Real Clients
+              Real <span className="gradient-text">Results</span> for our
+              Clients
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what we've achieved for 
+              Don't just take our word for it. Here's what we've achieved for
               interior designers just like you.
             </p>
           </div>
@@ -126,7 +131,7 @@ const Results = () => {
                   <div className="flex items-center justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold">{study.client}</h3>
-                      <p className="text-muted-foreground">{study.location}</p>
+                      {/* <p className="text-muted-foreground">{study.location}</p> */}
                     </div>
                     <span className="bg-secondary px-3 py-1 rounded-full text-sm">
                       {study.duration}
@@ -153,21 +158,31 @@ const Results = () => {
                       <div className="text-2xl font-bold">
                         <AnimatedCounter end={study.results.dealsWon} />
                       </div>
-                      <p className="text-xs text-muted-foreground">Deals Won</p>
+                      <p className="text-xs text-muted-foreground">
+                        Number of Site Visits
+                      </p>
                     </div>
                   </div>
 
                   <div className="bg-secondary/50 rounded-lg p-4 mb-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Total Ad Spend</span>
+                      <span className="text-muted-foreground">
+                        Total Ad Spend
+                      </span>
                       <span className="font-semibold">
                         ₹<AnimatedCounter end={study.results.totalSpend} />
                       </span>
                     </div>
                     <div className="flex items-center justify-between mt-2">
-                      <span className="text-muted-foreground">Revenue Generated</span>
+                      <span className="text-muted-foreground">
+                        Revenue Generated
+                      </span>
                       <span className="font-semibold gradient-text">
-                        ₹<AnimatedCounter end={study.results.revenueGenerated / 1000} suffix="K" />
+                        ₹
+                        <AnimatedCounter
+                          end={study.results.revenueGenerated / 1000}
+                          suffix="K"
+                        />
                       </span>
                     </div>
                   </div>
@@ -190,21 +205,24 @@ const Results = () => {
               Results You Can <span className="gradient-text">Count On</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Every campaign we run is designed with one goal: generating qualified 
-              leads that convert into paying clients. We're transparent about our 
-              process and results because we're confident in what we deliver.
+              Every campaign we run is designed with one goal: generating
+              qualified leads that convert into paying clients. We're
+              transparent about our process and results because we're confident
+              in what we deliver.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="card-glass p-6">
                 <h3 className="font-semibold mb-2">Weekly Reports</h3>
                 <p className="text-sm text-muted-foreground">
-                  Detailed performance metrics delivered to your inbox every week.
+                  Detailed performance metrics delivered to your inbox every
+                  week.
                 </p>
               </div>
               <div className="card-glass p-6">
                 <h3 className="font-semibold mb-2">Real-Time Dashboard</h3>
                 <p className="text-sm text-muted-foreground">
-                  Access to a live dashboard showing leads, costs, and conversions.
+                  Access to a live dashboard showing leads, costs, and
+                  conversions.
                 </p>
               </div>
               <div className="card-glass p-6">
@@ -221,13 +239,16 @@ const Results = () => {
       {/* CTA Section */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="gradient-bg rounded-2xl p-8 md:p-16 text-center glow-purple">
+          <div
+            className="rounded-2xl p-8 md:p-16 text-center glow-purple
+bg-gradient-to-br from-purple-800 via-purple-900 to-[#12001f]"
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
               Want Results Like These?
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Book your free Saturday audit call. We'll analyze your current 
-              marketing and show you exactly what's possible for your business.
+              Book your free audit call. We'll analyze your current marketing
+              and show you exactly what's possible for your business.
             </p>
             <Link to="/contact">
               <Button className="bg-white text-purple-dark hover:bg-white/90 text-lg px-8 py-6 font-semibold">

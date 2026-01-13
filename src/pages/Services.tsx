@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, AlertCircle, CheckCircle, Target, Palette, BarChart3, ArrowDown } from "lucide-react";
+import {
+  ArrowRight,
+  AlertCircle,
+  CheckCircle,
+  Target,
+  Palette,
+  BarChart3,
+  ArrowDown,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -7,17 +15,20 @@ const problems = [
   {
     icon: AlertCircle,
     title: "Irrelevant Inquiries",
-    description: "Getting leads who can't afford your services or aren't serious buyers.",
+    description:
+      "Getting leads who can't afford your services or aren't serious buyers.",
   },
   {
     icon: AlertCircle,
     title: "Wasted Ad Budgets",
-    description: "Spending money on ads that don't generate any meaningful results.",
+    description:
+      "Spending money on ads that don't generate any meaningful results.",
   },
   {
     icon: AlertCircle,
-    title: "No Tracking System",
-    description: "Unable to track which ads are working and which are wasting money.",
+    title: "No Brand Building",
+    description:
+      "Lack of a clear brand strategy and consistent brand identity.",
   },
   {
     icon: AlertCircle,
@@ -29,33 +40,40 @@ const problems = [
 const process = [
   {
     step: "01",
-    title: "Strategy & Targeting",
-    description: "We analyze your ideal client profile and create hyper-targeted audience segments. We identify homeowners in your service area who are actively looking for interior design services.",
+    title: "Strategy & Digital Foundation",
+    description:
+      "We analyze your ideal client profile and create hyper-targeted audience segments. We identify homeowners in your service area who are actively looking for interior design services. Plus we build or optimize your website to showcase your Portfolio and convert visitors into Leads",
     icon: Target,
   },
   {
     step: "02",
-    title: "Ad Creative & Copy",
-    description: "Our team creates scroll-stopping ad creatives and compelling copy that resonates with your target audience. We showcase your best work to attract quality leads.",
+    title: "Content Creation & Ad Campaigns",
+    description:
+      "Our team creates stunning Site Shoot Photography of your Projects and scroll-stopping ad creatives and compelling copy that resonates with your target audience. We launch targeted Meta Ads campaign and Manage your Social Media to consistently showcase your best work to attract quality leads.",
     icon: Palette,
   },
   {
     step: "03",
-    title: "Lead Optimization & Follow-up",
-    description: "We continuously optimize your campaigns for lower cost-per-lead while maintaining quality. Plus, we set up automated follow-up sequences to nurture leads.",
+    title: "Lead Optimization & Nuturing",
+    description:
+      "We continuously optimize your campaigns for lower cost-per-lead while maintaining quality. Plus, we set up automated follow-up sequences to nurture leads, and provide ongoing social media management to keep your Brand top-of-mind with potential Clients.",
     icon: BarChart3,
   },
 ];
 
 const included = [
   "Meta Ads Campaign Management",
-  "Custom Landing Page Design",
+  "Custom Website Design & Development",
   "Lead Tracking Dashboard",
   "Weekly Performance Reports",
   "Audience Research & Targeting",
-  "Ad Creative Design",
+  "Ad Creative Design & Copywriting",
   "A/B Testing & Optimization",
   "WhatsApp/Email Follow-up Setup",
+  "Professional Site Shoots & Photography",
+  "Portfolio Showcase Optimization",
+  "Social Media Management (Instagram/Facebook)",
+  "Content Calendar & Posting",
 ];
 
 const Services = () => {
@@ -69,8 +87,8 @@ const Services = () => {
               Our <span className="gradient-text">Services</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              A complete done-for-you Meta Ads system designed specifically for 
-              interior designers who want more high-quality clients.
+              A complete done-for-you system designed specifically for interior
+              designers who want more high-quality clients.
             </p>
           </div>
         </div>
@@ -84,8 +102,8 @@ const Services = () => {
               The Problems We <span className="gradient-text">Solve</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Sound familiar? These are the challenges interior designers face with 
-              traditional marketing approaches.
+              Sound familiar? These are the challenges interior designers face
+              with traditional marketing approaches.
             </p>
           </div>
 
@@ -97,7 +115,9 @@ const Services = () => {
               >
                 <problem.icon className="w-8 h-8 text-destructive mb-4" />
                 <h3 className="text-lg font-semibold mb-2">{problem.title}</h3>
-                <p className="text-muted-foreground text-sm">{problem.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {problem.description}
+                </p>
               </div>
             ))}
           </div>
@@ -116,17 +136,14 @@ const Services = () => {
               Our <span className="gradient-text">3-Step Process</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A proven system that consistently delivers high-quality leads for 
+              A proven system that consistently delivers high-quality leads for
               interior designers.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {process.map((step, index) => (
-              <div
-                key={step.step}
-                className="relative"
-              >
+              <div key={step.step} className="relative">
                 {index < process.length - 1 && (
                   <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-primary to-transparent z-0" />
                 )}
@@ -157,8 +174,9 @@ const Services = () => {
                 What's <span className="gradient-text">Included</span>
               </h2>
               <p className="text-muted-foreground mb-8">
-                Everything you need to generate consistent, high-quality leads. 
-                No hidden fees, no surprises. Just results.
+                Everything you need to attract premium clients and build a
+                powerful online presence. No hidden fees, no surprises. Just
+                results.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {included.map((item) => (
@@ -169,18 +187,21 @@ const Services = () => {
                 ))}
               </div>
             </div>
-            <div className="gradient-bg rounded-2xl p-8 md:p-12 text-center glow-purple">
+            <div
+              className="rounded-2xl p-8 md:p-16 text-center glow-purple
+bg-gradient-to-br from-purple-800 via-purple-900 to-[#12001f]"
+            >
               <h3 className="text-2xl font-bold text-primary-foreground mb-4">
                 Done-For-You System
               </h3>
               <p className="text-primary-foreground/80 mb-6">
-                Ads + Landing Page + Lead Tracking
+                Ads + Brand Building + Website + Photography
               </p>
               <div className="text-5xl font-bold text-primary-foreground mb-2">
                 All-in-One
               </div>
               <p className="text-primary-foreground/60 text-sm">
-                No need to hire multiple agencies or freelancers
+                No need to hire multiple agencies, photographers or freelancers
               </p>
             </div>
           </div>
@@ -193,31 +214,57 @@ const Services = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Why Interior Designers <span className="gradient-text">Choose Fluxy Media</span>
+                Why Interior Designers{" "}
+                <span className="gradient-text">Choose Fluxy Media</span>
               </h2>
             </div>
 
             <div className="space-y-6">
               <div className="card-glass p-6">
-                <h3 className="text-xl font-semibold mb-2">🎯 Industry Specialization</h3>
-                <p className="text-muted-foreground">
-                  We only work with interior designers. This means we understand your 
-                  market, your clients, and what messaging works best.
-                </p>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Industry Specialization
+                    </h3>
+                    <p className="text-muted-foreground">
+                      We only work with interior designers. This means we
+                      understand your market, your clients, and what messaging
+                      works best.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-glass p-6">
+                <div className="flex items-start gap-3">
+                  <BarChart3 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Transparent Reporting
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Weekly reports with clear metrics. You'll always know
+                      exactly how your campaigns are performing and where your
+                      money is going.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="card-glass p-6">
-                <h3 className="text-xl font-semibold mb-2">📊 Transparent Reporting</h3>
-                <p className="text-muted-foreground">
-                  Weekly reports with clear metrics. You'll always know exactly how 
-                  your campaigns are performing and where your money is going.
-                </p>
-              </div>
-              <div className="card-glass p-6">
-                <h3 className="text-xl font-semibold mb-2">💰 Performance-Focused</h3>
-                <p className="text-muted-foreground">
-                  We optimize for qualified leads, not vanity metrics. Our goal is 
-                  to help you close more projects and grow your revenue.
-                </p>
+                <div className="flex items-start gap-3">
+                  <Target className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      Performance-Focused
+                    </h3>
+                    <p className="text-muted-foreground">
+                      We optimize for qualified leads, not vanity metrics. Our
+                      goal is to help you close more projects and grow your
+                      revenue.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -232,8 +279,8 @@ const Services = () => {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Book your free Saturday audit call. We'll analyze your current 
-              marketing and show you exactly how we can help you grow.
+              Book your free audit call. We'll analyze your current marketing
+              and show you exactly how we can help you grow.
             </p>
             <Link to="/contact">
               <Button className="btn-primary text-lg px-8 py-6">

@@ -8,17 +8,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center font-bold text-xl text-primary-foreground">
-                F
-              </div>
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="/fluxy_logo.png"
+                alt="Fluxy Media Logo"
+                className="w-16 h-16 object-contain"
+              />
               <span className="text-xl font-bold">
-                Fluxy<span className="gradient-text">Media</span>
+                Fluxy<span className="gradient-text"> Media</span>
               </span>
             </Link>
             <p className="text-muted-foreground max-w-md mb-6">
-              India's leading Meta Ads agency exclusively for interior designers. 
-              We help you attract high-quality leads and grow your business.
+              India's one of the leading Marketing Agency exclusively for
+              interior designers. We help you attract high-quality leads and
+              grow your business.
             </p>
             <p className="text-sm text-muted-foreground">
               Serving Interior Designers in India & UAE
@@ -30,22 +33,34 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/about"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/services"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link to="/results" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/results"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -58,14 +73,20 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+919833427316" className="hover:text-primary transition-colors">
+                <a
+                  href="tel:+919833427316"
+                  className="hover:text-primary transition-colors"
+                >
                   +91 9833427316
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:aditya@fluxymedia.com" className="hover:text-primary transition-colors">
-                  aditya@fluxymedia.com
+                <a
+                  href="mailto:aditya@fluxymedia.com"
+                  className="hover:text-primary transition-colors"
+                >
+                  business@fluxymedia.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
