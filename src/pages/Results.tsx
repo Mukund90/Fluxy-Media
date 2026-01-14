@@ -30,7 +30,7 @@ const caseStudies = [
       revenueGenerated: 680000,
     },
     testimonial:
-      "Fluxy Media helped us expand our reach beyond our local area. We're now getting clients from across Maharashtra.",
+      "Fluxy Media helped us expand our reach beyond our local area. We're now getting clients from across Andra Pradesh.",
     duration: "1 month",
   },
   {
