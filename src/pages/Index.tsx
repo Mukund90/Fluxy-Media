@@ -14,11 +14,11 @@ const clients = [
 ];
 
 const stats = [
-  { value: 10000, suffix: "+", label: "Leads Generated" },
+  { value: 12000, suffix: "+", label: "Leads Generated" },
   // { value: 11, suffix: "", label: "Deals Closed" },
   { value: 10, prefix: "₹", suffix: "Cr+", label: "Revenue Generated" },
   { value: 30, suffix: "+", label: "Happy Clients" },
-  { value: 5, suffix: "x", label: "Avg. ROI" },
+  { value: 10, suffix: "x", label: "Avg. ROI" },
 ];
 
 const features = [
@@ -38,13 +38,13 @@ const features = [
     icon: TrendingUp,
     title: "Proven Results",
     description:
-      "Our clients see 3-5X ROI within the first 90 days of working with us.",
+      "Our clients see 10-12X ROI within the first 90 days of working with us.",
   },
   {
     icon: Users,
     title: "Industry Experts",
     description:
-      "We exclusively work with interior designers. We know your market.",
+      "We exclusively work with interior designers. We know your market very well.",
   },
 ];
 
@@ -84,7 +84,13 @@ const Index = () => {
             muted
             loop
             playsInline
+            preload="auto"
+            disablePictureInPicture
+            disableRemotePlayback
             className="w-full h-full object-cover"
+            onLoadedMetadata={(e) => {
+              e.currentTarget.playbackRate = 0.86;
+            }}
           >
             <source src="/interior.mp4" type="video/mp4" />
           </video>
@@ -143,36 +149,34 @@ const Index = () => {
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-background via-transparent to-background" />
             <div className="flex w-max animate-scroll gap-28 items-center">
               {[
-                "client1.png",
+                "client1.jpg",
                 "client2.png",
                 "client3.png",
                 "client4.png",
-                "client5.png",
+                // "client5.png",
                 "client6.png",
                 "client7.png",
                 "client8.png",
                 "client9.png",
-                "client10.png",
+                // "client10.png",
                 // repeat for seamless loop
-                "client1.png",
+                "client1.jpg",
                 "client2.png",
                 "client3.png",
                 "client4.png",
-                "client5.png",
+                // "client5.png",
                 "client6.png",
                 "client7.png",
                 "client8.png",
                 "client9.png",
-                "client10.png",
+                // "client10.png",
               ].map((logo, i) => (
-                <div
-                  key={i}
-                  className="w-40 h-24 md:w-48 md:h-28 flex items-center justify-center"
-                >
+                <div key={i} className="flex items-center justify-center">
                   <img
                     src={`/clients/${logo}`}
                     alt="Client logo"
-                    className="max-h-full max-w-full object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+                    className="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover 
+               shadow-lg opacity-95 hover:opacity-100 transition-all duration-300"
                   />
                 </div>
               ))}

@@ -170,5 +170,10 @@
 }
 
 .animate-scroll {
-  animation: scroll 80s linear infinite;
+  animation: scroll 40s linear infinite;
+}
+
+video {
+  will-change: opacity;
+  backface-visibility: hidden;
 }

@@ -51,7 +51,7 @@ const caseStudies = [
     client: "Studio Core Design",
     // location: "Bangalore",
     results: {
-      leads: 83,
+      leads: 112,
       costPerLead: 90,
       totalSpend: 7980,
       dealsWon: 26,
@@ -64,10 +64,10 @@ const caseStudies = [
 ];
 
 const overallStats = [
-  { label: "Total Leads Generated", value: 10000, suffix: "+" },
-  { label: "Deals Closed", value: 30, suffix: "+" },
+  { label: "Total Leads Generated", value: 12000, suffix: "+" },
+  { label: "Happy Clients", value: 30, suffix: "+" },
   { label: "Revenue Generated", value: 10, prefix: "₹", suffix: "Cr+" },
-  { label: "Avg. ROI", value: 5, suffix: "X" },
+  { label: "Avg. ROI", value: 10, suffix: "X" },
 ];
 
 const Results = () => {
@@ -161,29 +161,6 @@ const Results = () => {
                       <p className="text-xs text-muted-foreground">
                         Number of Site Visits
                       </p>
-                    </div>
-                  </div>
-
-                  <div className="bg-secondary/50 rounded-lg p-4 mb-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Total Ad Spend
-                      </span>
-                      <span className="font-semibold">
-                        ₹<AnimatedCounter end={study.results.totalSpend} />
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between mt-2">
-                      <span className="text-muted-foreground">
-                        Revenue Generated
-                      </span>
-                      <span className="font-semibold gradient-text">
-                        ₹
-                        <AnimatedCounter
-                          end={study.results.revenueGenerated / 1000}
-                          suffix="K"
-                        />
-                      </span>
                     </div>
                   </div>
 

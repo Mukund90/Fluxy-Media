@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/layout/Layout";
+const WEB3FORMS_ACCESS_KEY = "49a8c001-4808-48b7-8067-b2edc88f17c0";
 
 const contactInfo = [
   {
@@ -52,22 +53,48 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New Lead from Fluxy Media Website",
+          from_name: "Fluxy Media Website",
+          ...formData,
+        }),
+      });
 
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+      const result = await response.json();
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you within 24 hours.",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -363,9 +390,9 @@ const Contact = () => {
                   What's included in your service?
                 </h3>
                 <p className="text-muted-foreground">
-                  Everything: ad campaign management, landing page design, lead
-                  tracking dashboard, weekly reports, and ongoing optimization.
-                  It's a complete done-for-you system.
+                  Everything: ad campaign management, brand-building, landing
+                  page design, lead tracking dashboard, weekly reports, and
+                  ongoing optimization. It's a complete done-for-you system.
                 </p>
               </div>
             </div>

@@ -42,7 +42,7 @@ const process = [
     step: "01",
     title: "Strategy & Digital Foundation",
     description:
-      "We analyze your ideal client profile and create hyper-targeted audience segments. We identify homeowners in your service area who are actively looking for interior design services. Plus we build or optimize your website to showcase your Portfolio and convert visitors into Leads",
+      "We analyze your ideal client profile and create hyper-targeted audience segments. We identify homeowners in your service area who are actively looking for interior design services. Plus we build or optimize your website to showcase your portfolio and convert visitors into leads.",
     icon: Target,
   },
   {
@@ -54,9 +54,9 @@ const process = [
   },
   {
     step: "03",
-    title: "Lead Optimization & Nuturing",
+    title: "Lead Optimization & Nurturing",
     description:
-      "We continuously optimize your campaigns for lower cost-per-lead while maintaining quality. Plus, we set up automated follow-up sequences to nurture leads, and provide ongoing social media management to keep your Brand top-of-mind with potential Clients.",
+      "We continuously optimize your campaigns for lower cost-per-lead while maintaining quality. Plus, we set up automated follow-up sequences to nurture leads, and provide ongoing social media management to keep your brand top-of-mind with potential clients.",
     icon: BarChart3,
   },
 ];
@@ -101,10 +101,10 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               The Problems We <span className="gradient-text">Solve</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            {/* <p className="text-muted-foreground max-w-2xl mx-auto">
               Sound familiar? These are the challenges interior designers face
               with traditional marketing approaches.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -121,6 +121,11 @@ const Services = () => {
               </div>
             ))}
           </div>
+          <p className="text-center text-muted-foreground text-lg mt-10 max-w-2xl mx-auto">
+            <span className="font-semibold">Sound familiar?</span> These are the
+            challenges interior designers face with traditional marketing
+            approaches.
+          </p>
 
           <div className="flex justify-center mt-12">
             <ArrowDown className="w-8 h-8 text-primary animate-bounce" />

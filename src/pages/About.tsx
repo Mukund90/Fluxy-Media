@@ -173,9 +173,14 @@ const About = () => {
               </div>
             </div>
             <div className="card-glass p-8 text-center">
-              <div className="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-6 text-4xl font-bold text-primary-foreground">
-                F
+              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <img
+                  src="/fluxy_logo.png"
+                  alt="Fluxy Media Logo"
+                  className="w-16 h-16 object-contain"
+                />
               </div>
+
               <h3 className="text-2xl font-bold mb-2">Fluxy Media</h3>
               <p className="text-muted-foreground mb-4">
                 Santacruz(E), Mumbai 400055
