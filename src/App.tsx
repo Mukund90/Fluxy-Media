@@ -27,9 +27,6 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/results" element={<Results />} />
           <Route path="/contact" element={<Contact />} />
-          
-          {/* Ye line sabse important hai custom error page ke liye */}
-          {/* '*' ka matlab hai: agar upar wala koi bhi link match na ho, toh ye dikhao */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
