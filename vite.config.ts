@@ -17,16 +17,15 @@ export default defineConfig(({ mode }) => ({
     react(), 
     mode === "development" && componentTagger(),
     // 2. Add the sitemap plugin here
-    sitemap({ 
-      hostname: 'https://fluxymedia.com', // Change to your actual domain
-      dynamicRoutes: [
-        '/',
-        '/about',
-        '/services',
-        '/contact',
-        // Add any other pages you have in your App.tsx routes
-      ] 
-    }),
+  sitemap({ 
+  hostname: 'https://fluxymedia.com',
+  dynamicRoutes: [
+    '/about',
+    '/services',
+    '/results', // Yahan results add karein
+    '/contact',
+  ] 
+  }),
   ].filter(Boolean),
   resolve: {
     alias: {
